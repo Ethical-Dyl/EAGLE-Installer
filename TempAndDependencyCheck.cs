@@ -11,9 +11,7 @@ namespace EAGLE_Installer
     {
         public void TempDepCheck(string[] args)
         {
-            Console.WriteLine("Dylan Paynter, SPE.......");
-            Console.WriteLine("Beginning the Eagle Install Process");
-            Thread.Sleep(1200);
+            
             Console.WriteLine("Checking for Install MDT Dependencies V4.61NT and MDT Dependencies_Birds and C:\\temp");
             Thread.Sleep(1200);
 
@@ -26,15 +24,7 @@ namespace EAGLE_Installer
 
                 if (allFilesExist)
                 {
-                    DotNetInstaller dotNetInstaller = new DotNetInstaller();
-                    HmiInstaller hmiInstaller = new HmiInstaller();
-                    TempAndDependencyCheck tempAndDependencyCheck = new TempAndDependencyCheck();
-
-
                     ExecuteFiles(folderPath, mdtDependencyFiles);
-                    //tempAndDependencyCheck.;
-                    dotNetInstaller.dotNetInstall();
-                    hmiInstaller.MdtInstaller();
                 }
                 else
                 {
@@ -45,9 +35,6 @@ namespace EAGLE_Installer
             {
                 Console.WriteLine("Cannot proceed without the C:\\temp folder.");
             }
-
-            Console.WriteLine("Press any key to exit...");
-            Console.ReadKey();
         }
 
 

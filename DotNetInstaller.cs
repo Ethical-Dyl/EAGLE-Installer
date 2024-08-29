@@ -85,17 +85,23 @@ namespace EAGLE_Installer
 
                 if (process.ExitCode != 0)
                 {
+                    Console.BackgroundColor = ConsoleColor.Red;
                     Console.WriteLine($"Error installing {featureName}. Exit code: {process.ExitCode}");
                     Console.WriteLine($"Error output: {error}");
+                    Console.ResetColor();
                 }
                 else
                 {
+                    Console.BackgroundColor = ConsoleColor.Green;
                     Console.WriteLine($"Successfully installed {featureName}");
+                    Console.ResetColor();
                 }
             }
             catch (Exception ex)
             {
+                Console.BackgroundColor = ConsoleColor.Red;
                 Console.WriteLine($"Exception occurred while installing {featureName}: {ex.Message}");
+                Console.ResetColor();
             }
         }
     }

@@ -86,15 +86,18 @@ namespace EAGLE_Installer
                 using (Process process = Process.Start(filePath))
                 {
                     Console.BackgroundColor = ConsoleColor.DarkGreen;
-                    Console.WriteLine("Dependency File Present! Starting install...");
+                    Console.WriteLine($"{Path.GetFileName(filePath)} Present! Starting install...");
+                    
+                    Console.WriteLine($"Successfully ran: {Path.GetFileName(filePath)}");
                     Console.ResetColor();
                     process.WaitForExit();
-                    Console.WriteLine($"Successfully ran: {Path.GetFileName(filePath)}");
                 }
             }
             catch (Exception ex)
             {
+                Console.BackgroundColor= ConsoleColor.Red;
                 Console.WriteLine($"Error executing {Path.GetFileName(filePath)}: {ex.Message}");
+                Console.ResetColor();
             }
         }
 
@@ -121,7 +124,9 @@ namespace EAGLE_Installer
             }
             else
             {
+                Console.BackgroundColor = ConsoleColor.Red;
                 Console.WriteLine("Operation cancelled.");
+                Console.ResetColor();
             }
         }
     }
