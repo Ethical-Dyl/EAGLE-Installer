@@ -5,7 +5,24 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <ApplicationIcon>eagle_flag.ico</ApplicationIcon>
+    <Company>Dylan Paynter</Company>
+    <Authors>Dylan Paynter</Authors>
+    <Title>Eagle Installer</Title>
+    <Copyright>Dylan Paynter</Copyright>
+    <PackageIcon>eagle_flag.jpg</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="eagle_flag.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\Downloads\eagle_flag.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="System.Management" Version="8.0.0" />
