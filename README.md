@@ -1,5 +1,6 @@
 # EAGLE_Installer
 
+![eagle_flag](https://github.com/user-attachments/assets/54769c73-b6d7-4668-8c83-c75ca46adf4a)
 
 ## This is a writeup of how to install Eagle on a laptop.
 
